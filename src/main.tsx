@@ -1,17 +1,18 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
+import { BrowserRouter } from 'react-router-dom'
+import App from './Routes.tsx'
 import { ThemeProvider } from './components/ui/theme-provider.tsx'
 import { AuthProvider } from './firebaseConfig.tsx'
 import './index.css'
-import { BrowserRouter } from 'react-router-dom'
+import Layout from './lib/layout.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <AuthProvider>
         <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-          <App />
+          <Layout children={<App />} />
         </ThemeProvider>
       </AuthProvider>
     </BrowserRouter>
