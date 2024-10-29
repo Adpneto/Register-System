@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+Aqui está um README estruturado para o seu sistema de registro com Firebase:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# 🔐 Sistema de Registro com Firebase
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto fornece um sistema de registro completo, permitindo que novos usuários criem conta, façam login e editem seus perfis com facilidade. Com funcionalidades de autenticação e gerenciamento de perfil, essa base serve para iniciar rapidamente novos projetos que precisem de um sistema de registro otimizado.
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React + Vite**: Para construção rápida e modular da aplicação.
+- **TypeScript**: Oferece segurança de tipos e facilita a manutenção do código.
+- **ShadCN UI + Tailwind**: Interface responsiva e visualmente atrativa, com estilização eficiente.
+- **Firebase**: Gerencia autenticação e banco de dados em tempo real para perfis de usuários.
 
-- Configure the top-level `parserOptions` property like this:
+## 🚀 Funcionalidades
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Registro e Login de Usuários**: Permite criação de contas e login seguro.
+- **Edição de Perfil**: Usuários podem atualizar foto, nome e outras informações pessoais.
+- **Validações de Formulário**: Garante a integridade dos dados inseridos para melhor segurança.
+- **Armazenamento de Fotos**: Upload e gerenciamento de fotos de perfil no Firebase Storage.
+
+## 📂 Estrutura do Projeto
+
+- **/src**: Componentes da aplicação, lógica de autenticação e interações com o Firebase.
+
+## 🏁 Como Iniciar o Projeto
+
+### Pré-requisitos
+Certifique-se de ter o [Node.js](https://nodejs.org/) instalado.
+
+### Instalação
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/Adpneto/Register-System.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd register-system
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+### Executando o Projeto
+```bash
+npm run dev
 ```
+Acesse em seu navegador: `http://localhost:3000`
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🔒 Configuração do Firebase
+1. Crie um projeto no [Firebase Console](https://console.firebase.google.com/).
+2. Configure a autenticação, Firebase Storage e banco de dados.
+3. Substitua as credenciais de configuração do Firebase no arquivo `firebaseConfig.js`.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 📸 Capturas de Tela
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Em breve adicionarei fotos sobre o visual do projeto
+
+---
+
+Se precisar de mais ajustes ou quiser incluir uma seção extra, avise!
